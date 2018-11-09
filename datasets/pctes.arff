@@ -1,0 +1,294 @@
+@relation 'Base de datos PCTES-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R6-7,10-13,17'
+
+@attribute Genero {H,M}
+@attribute Edad numeric
+@attribute Test {1, 2, 3, 4}
+@attribute 'Código Test' {Éxito,Fracaso,Reentubado}
+@attribute 'Diagnóstico Principal' {'Insuficiencia cardíaca congestiva','Insuficiencia Respiratoria crónica agudizada','Intoxicación múltiple','Hemorragia digestiva alta','Muerte Súbita','Infarto cerebral',Miocardiopatía,Nefrostomía,'Bocio intratorácico',Politrauma,'Fractura de pelvis','Meningococcemia ',Peritonitis,'Traumatismo craneoencefálico','Crisis comicial','Hemorragia cerebral ','Cirugía cardíaca','Enfermedad pulmonar obstructiva crónica ',Ahogado,'Infarto agudo de miocardio',coma,Coleocistitis,'Alteración valvular cardíaca','Adenocarcinoma de orofaringe','Meningitis ','Neumonía a Pneumococo','Neo de sigma','Pancreatitis aguda grave','Tumor Hepático','Aneurisma de aorta abdominal',Gástrica,'Ulcus duodenal ',Colónica,'Sustitución válvula mitral ','Sustitución válvula aórtica',Sepsis,'Triple By-Pass','Intoxicación ','Disección aórtica','Hernia interna ','Neumonía ','Aneurisma de aórtica',VIH+,'Isquemia intestinal ','Status Epiléptico',Neumonía,'Hemorragia subaracnoidea','Fibrosis pulmonar','Trombosis venosa profunda','Cardiopatía isquemémica',Oligodendroglioma,Legionela,'Packing hepático','Neo vesical','Ileal ',Duodenal,'Sustitución valvular aórtica','Perforación de sigma','Linfoma linfoblástico','Sigma perforada ','Fractura subcapital ','Hematoma epidural ','Meninigitis meningococica','Miastenia gravis','Encefalitis ','Hemorragia intraparenquimatosa cerebral','Colangitis ','Insuficiencia respiratoria ',Polineuropatía,'Shock séptico ','Embolia mesentérica','Sepsis abdominal ','Ventriculitis ','Obstrucción intestinal ','Craniectomía ',Panhipopituarismo,'Parada cardiorespiratoria','sepsis urológica','Fibrilación ventricular','Deprivación alcohólica','Insuficiencia cardíaca',Asma,'Enfermedad arterial periférica','By - Pass bifemoral ','Ictericia obstructiva','Síndrome confusional ','Insuficiencia crónica agudizada','Shock cardiogénico','Hematoma subdural ','Síndrome de dificultad respiratoria aguda','Neumonía neumocócica','Insuficiencia cardíaca ',Hepatectomía,'Shock ','Shock hemorrágico','Pancreatitis ',Pancreatitis,'By - Pass','Insuficiencia respiratoria hipercápnica','Insuficiencia cardíacca ',Hemoptisis}
+@attribute 'Clasificación DPr' {'Insuficiencia cardíaca ','Enfermedad pulmonar',Miscelánea,'Enfermedad neurológica ','Patología abdominal ','Postoperatorio cirugía cardíaca '}
+@attribute 'Código DPr' {ICC,PULM,MISC,NRL,PABD,PSTC}
+@attribute 'Código DIRA' {ICC,PULM,NRL,PABD,MISC}
+@attribute 'Clasificación PULM ' {'Secundaria ','Primario ',Neurológico}
+@attribute 'Código PULM' numeric
+@attribute 'Modo abr' {AC,PS}
+@attribute 'FR ANTES' numeric
+@attribute 'VT ANTES' numeric
+@attribute PEEP numeric
+@attribute 'FIO2 ANTES' numeric
+@attribute T° numeric
+@attribute dVM numeric
+@attribute 'TAS ANTES ' numeric
+@attribute 'TAD ANTES ' numeric
+@attribute 'FC ANTES' numeric
+@attribute 'Hb ' numeric
+@attribute FR numeric
+@attribute VT numeric
+@attribute FIO2 numeric
+@attribute TAS numeric
+@attribute TAD numeric
+@attribute FC numeric
+
+@data
+H,76,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,20,500,5,0.4,37,3,110,50,80,90,30,250,5,110,50,80
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,80,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,400,4,0.3,36,1,130,70,90,105,35,78,5,130,70,95
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,22,3,Éxito,'Intoxicación múltiple',Miscelánea,MISC,NRL,Neurológico,3,AC,14,600,8,0.3,36.5,1,130,70,110,140,12,600,2,140,80,90
+H,72,3,Éxito,'Hemorragia digestiva alta',Miscelánea,MISC,PABD,'Secundaria ',2,PS,14,450,6,0.4,36.5,7,130,60,130,91,38,?,3,140,60,86
+H,76,3,Éxito,'Muerte Súbita',Miscelánea,MISC,NRL,Neurológico,3,AC,12,500,5,0.2,37,2,110,60,110,110,19,?,2,110,60,90
+H,53,3,Éxito,'Infarto cerebral','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,10,?,7,0.3,36.5,5,140,70,90,140,18,350,3,160,80,90
+?,?,?,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+?,?,?,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,76,3,Éxito,'Insuficiencia cardíaca congestiva','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,PS,16,540,6,0.3,36,5,110,50,75,110,25,?,2,100,70,80
+M,71,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,16,450,6,0.4,36,2,140,60,70,120,22,0,4,160,80,60
+H,75,2,Fracaso,Miocardiopatía,'Enfermedad neurológica ',NRL,PULM,'Primario ',1,PS,10,?,8,0.4,37,10,130,50,100,77,25,?,5,145,40,90
+H,83,4,Reentubado,Nefrostomía,Miscelánea,MISC,PULM,'Primario ',1,AC,15,600,6,0.3,37,4,140,60,100,90,?,?,3,180,70,130
+H,75,3,Éxito,'Bocio intratorácico',Miscelánea,MISC,PULM,'Primario ',1,PS,8,?,3,0.4,36.5,4,140,70,80,80,23,?,4,160,70,80
+M,47,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,30,3,Éxito,Politrauma,Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,500,6,0.4,37.5,1,130,60,80,100,16,?,2,120,60,80
+H,76,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,12,?,4,0.2,?,2,?,?,?,?,?,?,?,?,?,?
+M,80,3,Éxito,'Fractura de pelvis',Miscelánea,MISC,PULM,'Primario ',1,PS,12,?,5,0.3,37,1,140,48,80,97,22,?,1,160,50,70
+H,73,2,Fracaso,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,PULM,'Primario ',1,PS,8,?,4,0.3,36,1,90,60,99,114,42,?,1,160,50,112
+M,45,2,Fracaso,'Meningococcemia ','Enfermedad neurológica ',NRL,PULM,'Primario ',1,AC,22,500,10,0.5,36.5,7,160,80,90,91,30,?,4,160,90,90
+H,71,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,24,460,5,0.3,36.5,8,140,50,80,72,24,0,4,170,60,90
+H,75,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,18,500,6,0.4,36.5,1,130,60,60,117,25,?,2,120,60,70
+M,23,3,Éxito,'Traumatismo craneoencefálico','Enfermedad neurológica ',NRL,PULM,'Primario ',1,AC,13,600,6,0.3,37.5,5,140,60,90,95,25,?,2,150,70,95
+H,38,3,Éxito,'Crisis comicial','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,14,550,6,0.4,36.5,4,120,60,90,136,28,?,2,120,60,90
+H,77,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,18,600,8,0.4,36.7,3,110,50,70,148,16,?,2,110,50,70
+H,18,3,Éxito,'Traumatismo craneoencefálico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,8,590,6,0.3,37,9,130,60,75,80,?,?,2,120,70,60
+M,43,3,Éxito,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,14,550,5,0.4,36.5,2,150,70,90,127,16,?,3,160,80,95
+H,46,3,Éxito,'Hemorragia digestiva alta',Miscelánea,MISC,MISC,'Secundaria ',2,AC,18,700,5,0.3,37,1,115,70,108,80,18,?,?,115,70,90
+M,77,2,Éxito,'Cirugía cardíaca','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,PS,27,?,4,0.3,36.5,12,140,60,100,95,?,?,3,180,70,100
+M,83,1,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,14,?,6,0.3,36,2,110,60,80,115,?,?,?,120,70,90
+H,73,1,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,20,450,5,0.3,36.5,1,140,60,90,160,25,?,1,110,50,95
+H,77,3,Éxito,Ahogado,Miscelánea,MISC,PULM,'Primario ',1,AC,14,510,4,0.3,36.6,4,160,70,75,126,40,?,5,150,70,70
+M,74,3,Éxito,'Infarto agudo de miocardio','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,14,500,8,0.4,36,1,100,60,100,116,16,?,2,106,60,100
+H,25,3,Éxito,coma,'Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,16,600,5,0.4,38,1,115,80,120,136,?,?,?,115,80,110
+H,74,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,500,5,0.3,38,1,150,70,100,120,20,?,5,170,80,95
+H,78,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,16,620,5,0.5,36.5,1,130,70,90,85,?,?,1,120,30,100
+M,71,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,480,4,0.2,36.5,2,165,85,85,111,30,?,1,170,90,100
+M,77,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,16,400,5,0.3,36.5,2,180,90,96,124,23,?,1,180,90,100
+M,75,3,Éxito,Coleocistitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,14,300,4,0.3,36.5,2,160,60,110,123,16,?,3,100,50,100
+M,73,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,77,4,Reentubado,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,480,6,0.4,37.5,1,120,60,80,132,18,?,2,120,60,80
+H,63,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,26,?,5,0.3,37,6,130,50,90,106,20,?,3,140,60,90
+M,66,2,Fracaso,'Alteración valvular cardíaca','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,28,?,8,0.3,36,9,140,60,45,106,?,?,3,180,60,45
+H,62,2,Fracaso,'Adenocarcinoma de orofaringe',Miscelánea,MISC,PABD,'Secundaria ',2,PS,21,600,5,0.3,36.5,7,120,70,100,84,36,?,3,148,66,109
+H,61,2,Fracaso,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,17,500,8,0.3,37,2,180,70,67,123,28,?,3,170,76,90
+H,77,2,Fracaso,'Meningitis ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,26,500,5,0.3,36.5,12,110,60,80,81,36,?,3,130,60,79
+H,65,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,14,400,4,0.3,37,3,120,60,74,133,28,?,1,118,71,72
+H,41,2,Fracaso,'Neumonía a Pneumococo','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,26,300,6,0.3,36.5,25,140,70,100,82,38,?,4,134,66,125
+M,56,2,Fracaso,'Neo de sigma','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,14,400,5,0.4,36.8,3,140,80,110,128,32,?,3,151,75,113
+H,69,1,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,25,580,5,0.3,36.5,8,140,60,88,186,28,?,1,159,74,100
+H,75,2,Fracaso,'Pancreatitis aguda grave','Patología abdominal ',PABD,PULM,'Primario ',1,PS,25,500,5,0.3,37,12,120,70,98,83,36,?,1,165,82,101
+H,63,1,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,16,500,5,0.3,37,1,120,70,85,135,24,?,1,137,70,85
+M,49,2,Fracaso,'Alteración valvular cardíaca','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,16,500,5,0.3,36.5,48,130,70,90,120,26,?,1,120,60,89
+M,74,3,Éxito,'Tumor Hepático','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,14,500,8,0.4,36.5,1,120,50,120,126,17,?,4,120,56,119
+H,79,?,?,'Aneurisma de aorta abdominal','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,20,400,4,0.3,36.5,1,110,70,120,90,17,?,1,120,70,120
+M,58,2,Fracaso,Gástrica,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,16,340,5,0.3,36.5,24,120,50,80,82,20,?,5,140,80,88
+M,84,2,Fracaso,'Ulcus duodenal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,18,431,8,0.3,37,2,120,60,108,120,18,?,2,120,60,140
+M,84,2,Fracaso,'Ulcus duodenal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,15,350,7,0.3,36.5,3,120,69,90,100,18,?,3,180,70,98
+H,83,3,Éxito,Colónica,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,18,480,6,0.3,36,3,140,80,96,120,20,?,3,136,79,101
+H,75,2,Fracaso,'Sustitución válvula mitral ','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,PS,15,480,6,0.3,37,2,140,80,98,92,27,?,5,160,90,100
+H,58,4,Reentubado,'Muerte Súbita',Miscelánea,MISC,PULM,'Primario ',1,PS,10,?,8,0.5,36.5,4,120,50,100,95,?,0,2,140,60,97
+H,70,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,28,400,5,0.2,36.7,1,100,40,85,113,30,?,1,110,60,85
+M,80,2,Fracaso,Coleocistitis,'Patología abdominal ',PABD,MISC,'Secundaria ',2,PS,25,400,5,0.3,37,1,130,80,89,88,30,0,1,150,90,100
+M,72,4,Reentubado,'Sustitución válvula aórtica','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,AC,15,500,5,0.3,7,16,100,50,106,88,26,0,4,90,50,94
+H,73,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,12,?,6,0.4,36.5,1,120,60,70,110,?,0,2,140,70,80
+M,78,3,Éxito,Sepsis,'Patología abdominal ',PABD,PULM,'Primario ',1,PS,8,?,6,0.3,36,5,120,50,85,110,20,0,?,120,60,80
+H,79,2,Fracaso,'Triple By-Pass','Postoperatorio cirugía cardíaca ',PSTC,MISC,'Secundaria ',2,PS,8,?,5,0.3,36.5,6,140,60,80,100,?,0,2,160,65,85
+H,39,3,Éxito,'Intoxicación ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,10,?,6,0.3,37,1,120,60,90,150,16,0,1,130,70,80
+M,60,3,Éxito,'Sustitución válvula mitral ','Postoperatorio cirugía cardíaca ',PSTC,PULM,'Primario ',1,PS,10,?,8,0.3,36,14,110,50,90,90,26,0,2,120,60,70
+H,59,3,Éxito,'Disección aórtica','Postoperatorio cirugía cardíaca ',PSTC,PULM,'Primario ',1,PS,10,?,6,0.3,36,9,140,50,80,90,18,0,3,150,60,90
+H,72,4,Reentubado,'Infarto agudo de miocardio','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,6,?,5,0.3,36.5,5,120,60,90,100,22,0,3,120,60,80
+H,77,3,Éxito,Coleocistitis,'Patología abdominal ',PABD,PULM,'Primario ',1,PS,6,?,6,0.4,37,16,110,50,80,110,30,0,5,130,60,100
+M,73,2,Fracaso,Politrauma,Miscelánea,MISC,MISC,'Secundaria ',2,PS,10,?,5,0.4,37,12,140,50,70,80,?,0,3,170,70,70
+H,82,3,Éxito,'Hernia interna ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,16,500,5,0.3,36,1,100,50,70,130,25,0,3,130,60,70
+H,81,4,Reentubado,Peritonitis,'Patología abdominal ',PABD,PULM,'Primario ',1,PS,10,?,8,0.3,37,11,110,50,90,80,32,0,3,110,50,90
+H,40,3,Éxito,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,16,500,8,0.4,37.5,2,130,80,110,110,24,0,2,150,80,110
+M,76,4,Reentubado,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,8,?,6,0.3,37,7,130,60,80,110,30,0,3,150,90,90
+M,67,4,Reentubado,'Aneurisma de aórtica','Patología abdominal ',PABD,NRL,Neurológico,3,PS,10,?,7,0.3,36.5,20,120,60,110,100,26,0,?,130,60,105
+M,57,1,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,16,650,5,0.4,37.5,1,130,60,95,100,?,0,3,150,80,100
+H,41,1,Éxito,VIH+,Miscelánea,MISC,MISC,'Secundaria ',2,PS,20,600,8,0.4,36.6,2,100,60,90,120,28,0,5,110,70,90
+M,80,1,Éxito,'Isquemia intestinal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,16,400,4,0.2,37,5,150,70,90,120,26,0,2,170,70,90
+M,42,?,?,'Status Epiléptico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,10,400,5,0.3,37,1,130,60,100,130,26,0,2,130,70,81
+M,78,?,?,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,12,400,6,0.3,37,14,100,40,95,70,30,0,2,100,40,95
+M,41,1,Éxito,'Crisis comicial','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,20,380,5,0.3,36,1,130,70,90,128,22,0,2,120,60,80
+M,72,1,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,10,?,5,0.4,37,2,120,50,90,105,21,0,2,130,60,100
+H,64,1,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,22,480,5,0.4,36,9,120,60,70,97,30,0,3,110,50,85
+M,57,4,Reentubado,'Hemorragia subaracnoidea','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,20,450,5,0.4,36,9,120,60,70,120,17,0,2,120,60,66
+H,76,1,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,25,400,5,0.4,36,8,140,60,100,100,20,0,5,145,65,65
+H,74,1,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,23,420,8,0.5,36,7,100,50,100,120,30,0,3,125,53,100
+H,55,2,Fracaso,'Fibrosis pulmonar','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,30,400,5,0.4,36.5,5,110,50,90,120,34,0,4,110,50,90
+H,57,1,Éxito,'Trombosis venosa profunda',Miscelánea,MISC,PULM,'Primario ',1,PS,25,320,6,0.4,37,10,130,60,115,80,30,0,3,140,70,110
+H,55,2,Fracaso,'Fibrosis pulmonar','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,3,500,5,0.4,36,9,100,50,80,120,27,0,6,120,50,100
+H,72,2,Fracaso,'Cardiopatía isquemémica','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,PS,27,600,6,0.4,36,7,130,50,80,80,33,0,3,150,70,90
+M,47,4,Reentubado,Oligodendroglioma,'Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,15,500,5,0.4,36,5,110,50,100,109,16,0,3,110,50,100
+H,69,3,Éxito,Legionela,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,8,?,4,0.3,37,20,140,60,70,81,27,0,4,150,70,70
+H,45,2,Fracaso,'Meningitis ','Enfermedad neurológica ',NRL,PULM,'Primario ',1,PS,?,?,7,0.4,36.5,10,120,50,70,81,24,0,2,110,60,90
+H,72,3,Éxito,'Packing hepático','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,23,450,6,0.3,36.5,6,110,70,110,88,26,0,3,154,81,112
+M,54,4,Reentubado,'Meningitis ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,15,530,5,0.3,36,3,130,60,70,107,15,?,3,150,80,90
+H,50,3,Éxito,'Alteración valvular cardíaca','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,8,500,4,0.4,36.5,7,130,70,100,91,?,?,2,130,70,90
+H,75,4,Reentubado,'Neo vesical','Patología abdominal ',PABD,PULM,'Primario ',1,PS,15,467,5,0.4,37.5,6,120,50,80,72,18,?,4,120,50,80
+H,60,3,Éxito,'Ileal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,?,?,5,0.3,36.5,8,130,70,110,85,26,?,2,130,70,120
+M,74,2,Fracaso,Duodenal,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,20,535,4,0.3,36,12,110,50,80,85,21,?,4,120,60,85
+M,74,4,Reentubado,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,450,10,0.4,36,2,110,50,80,94,24,?,3,130,50,80
+H,67,4,Reentubado,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,17,450,3,0.3,36,4,150,90,90,108,15,0,3,160,60,70
+H,72,4,Reentubado,'Aneurisma de aorta abdominal','Patología abdominal ',PABD,PULM,'Primario ',1,PS,16,?,5,0.4,36.5,4,110,60,100,79,31,0,2,115,90,117
+H,57,2,Fracaso,'Infarto agudo de miocardio','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,15,740,7,0.4,36,10,110,50,120,77,15,0,4,115,65,8
+H,80,3,Éxito,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,15,600,5,0.3,36.5,3,90,50,75,99,16,0,4,100,40,70
+H,58,2,Fracaso,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,30,560,6,0.3,37.8,4,110,70,85,105,36,0,4,149,73,90
+H,62,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,8,?,5,0.3,37.2,3,140,60,74,162,?,0,3,140,60,75
+H,45,4,Reentubado,'Meningitis ','Enfermedad neurológica ',NRL,PULM,'Primario ',1,PS,?,?,8,0.4,36.5,5,110,50,70,93,22,0,2,110,60,70
+H,71,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,8,?,5,0.3,36.5,1,150,60,86,100,14,0,1,150,60,86
+H,25,4,Reentubado,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,8,?,6,0.3,37.2,11,150,70,65,108,16,0,2,150,80,63
+H,75,4,Reentubado,'Neo vesical','Patología abdominal ',PABD,PULM,'Primario ',1,PS,8,?,8,0.4,36,4,120,50,70,83,19,?,2,120,50,70
+M,75,2,Fracaso,'Sustitución valvular aórtica','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,PS,26,330,6,0.6,36,11,120,60,100,79,22,?,3,133,55,110
+M,75,2,Fracaso,'Sustitución valvular aórtica','Postoperatorio cirugía cardíaca ',PSTC,ICC,'Secundaria ',2,PS,20,350,5,0.3,36.6,15,100,40,85,77,33,?,1,170,80,110
+H,66,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,18,500,8,0.4,36.5,2,110,60,65,130,22,?,1,130,60,70
+M,79,3,Éxito,'Perforación de sigma','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,22,300,5,0.4,36,6,120,65,110,86,29,?,2,105,45,105
+H,71,2,Fracaso,'Linfoma linfoblástico',Miscelánea,MISC,PULM,'Primario ',1,PS,26,460,6,0.3,37.3,17,120,60,108,78,28,?,4,101,53,102
+M,85,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,14,?,6,0.4,36.5,2,120,50,120,102,26,?,2,110,50,110
+H,71,3,Éxito,'Linfoma linfoblástico',Miscelánea,MISC,PULM,'Primario ',1,PS,24,400,6,0.3,36,18,120,60,90,77,22,?,3,110,40,90
+M,72,2,Fracaso,'Sigma perforada ','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,28,360,6,0.4,37.5,8,110,50,110,93,30,?,4,120,55,107
+H,84,3,Éxito,'Fractura subcapital ',Miscelánea,MISC,PULM,'Primario ',1,PS,16,460,4,0.2,36.5,1,128,60,65,105,15,?,4,117,53,69
+H,58,2,Fracaso,'Hematoma epidural ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,16,750,8,0.4,37,7,170,90,90,106,16,?,5,180,80,90
+M,78,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,14,?,5,0.4,36.5,3,110,50,70,82,28,?,2,140,60,90
+H,58,3,Éxito,'Hematoma epidural ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,20,700,6,0.4,36,19,120,60,90,104,22,?,4,123,60,87
+H,61,3,Éxito,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,20,450,5,0.5,35.5,1,140,60,110,121,29,?,1,130,60,80
+H,30,3,Éxito,'Meninigitis meningococica','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,10,?,6,0.3,36,6,160,80,60,151,12,?,2,140,70,70
+H,45,4,Reentubado,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,20,470,5,0.4,37.2,3,150,60,80,124,13,?,2,150,70,60
+M,47,3,Éxito,'Miastenia gravis','Enfermedad neurológica ',NRL,PULM,'Primario ',1,PS,28,350,6,0.4,36,4,120,55,95,89,28,?,2,130,75,105
+H,61,3,Éxito,'Encefalitis ','Enfermedad neurológica ',NRL,NRL,'Secundaria ',2,PS,28,400,5,0.3,37,15,130,60,100,93,27,?,4,120,60,103
+H,75,3,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,69,3,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,71,3,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,44,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,78,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,78,3,Éxito,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,80,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,78,3,Éxito,'Aneurisma de aorta abdominal','Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,24,450,5,0.4,37,12,110,50,100,81,28,?,2,150,80,110
+H,34,2,Fracaso,'Hemorragia intraparenquimatosa cerebral','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,14,750,?,0.4,36,15,176,96,65,100,33,?,4,182,100,69
+H,34,2,Fracaso,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,16,750,?,0.4,37,18,170,80,68,110,28,0,4,185,100,65
+H,70,2,Fracaso,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,650,?,0.4,37.2,3,120,50,80,100,33,0,4,145,60,87
+H,34,2,Fracaso,'Hemorragia cerebral ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,18,650,5,0.4,36.8,22,190,96,75,110,22,0,4,170,0,86
+M,103,2,Fracaso,'Colangitis ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,14,500,5,0.4,37,4,150,70,90,90,28,0,4,155,65,105
+H,64,2,Fracaso,'Insuficiencia respiratoria ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,24,750,5,0.4,36.2,4,130,80,108,130,34,0,0,130,70,106
+H,80,2,Fracaso,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,20,400,5,0.4,36.5,17,143,56,62,80,30,0,0,196,75,82
+M,58,2,Fracaso,Politrauma,Miscelánea,MISC,MISC,'Secundaria ',2,AC,24,500,5,0.4,36.9,8,135,61,69,80,37,0,0,200,86,96
+H,77,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,500,5,0.4,36,2,140,65,86,120,27,0,0,147,65,92
+H,62,2,Fracaso,Polineuropatía,Miscelánea,MISC,PULM,'Primario ',1,AC,14,600,5,0.4,38,10,130,74,105,100,44,0,0,113,71,100
+M,67,2,Fracaso,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,67,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,13,650,5,0.4,36.5,4,123,67,75,160,21,0,4,148,81,94
+H,67,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,650,5,0.4,36,5,126,74,79,160,22,0,4,159,84,104
+H,67,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,650,5,0.4,36,6,140,77,76,150,15,0,4,137,75,78
+H,70,3,Éxito,'Shock séptico ',Miscelánea,MISC,MISC,'Secundaria ',2,AC,15,600,5,0.4,36,4,151,69,76,120,24,0,4,145,64,79
+H,74,2,Fracaso,'Embolia mesentérica','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,15,650,5,0.4,36.8,6,130,65,115,120,27,0,4,155,80,110
+M,80,3,Éxito,'Colangitis ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,12,400,5,0.4,36,2,175,70,85,80,16,0,4,175,65,88
+M,77,3,Éxito,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,16,550,5,0.4,36.5,8,154,77,96,100,25,0,0,180,80,90
+H,53,3,Éxito,'Sepsis abdominal ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,20,600,5,0.4,37,5,130,70,100,80,26,0,4,116,61,110
+M,60,3,Éxito,'Ventriculitis ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,20,650,5,0.3,36,22,190,90,72,90,19,0,4,192,100,76
+M,58,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,6,650,5,0.4,36,20,105,60,81,140,31,0,4,109,65,77
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,88,3,Éxito,'Obstrucción intestinal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,12,600,5,0.4,36.5,4,140,40,60,90,30,0,4,137,55,60
+H,48,2,Fracaso,'Craniectomía ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,15,650,5,0.4,37.7,6,160,70,80,110,26,0,4,168,71,80
+H,69,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,600,5,0.4,36.5,3,134,57,50,100,18,0,4,140,60,50
+H,69,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,22,600,5,0.4,36.5,4,135,51,50,100,20,0,4,142,52,50
+M,62,3,Éxito,'Meningitis ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,17,600,5,0.4,36.7,5,132,74,80,110,32,0,4,122,80,84
+M,58,2,Fracaso,Panhipopituarismo,'Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,18,600,5,0.4,37.1,20,175,75,75,100,20,0,4,168,74,64
+M,58,2,Fracaso,Panhipopituarismo,'Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,19,600,5,0.4,37.4,21,170,80,60,100,35,0,4,200,95,105
+M,77,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,430,5,0.4,36.4,7,128,60,74,130,20,0,0,137,67,77
+H,75,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,17,600,8,0.4,36.8,13,100,55,71,130,16,0,0,132,62,75
+H,54,2,Fracaso,'Parada cardiorespiratoria','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,15,550,5,0.4,37,4,120,72,110,110,45,0,0,142,56,78
+H,38,2,Fracaso,'Traumatismo craneoencefálico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,30,550,5,0.4,37.4,22,134,74,82,80,29,0,4,155,80,96
+M,82,2,Fracaso,'Status Epiléptico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,12,550,5,0.4,36.6,6,145,65,88,100,16,0,0,151,74,86
+H,38,3,Éxito,'Traumatismo craneoencefálico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,30,550,5,0.4,37.2,23,133,77,100,80,28,0,0,144,72,85
+H,75,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,650,5,0.4,36.4,11,150,55,60,110,36,0,0,200,102,106
+H,65,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,20,550,5,0.4,37.2,4,180,70,83,110,53,0,0,200,90,86
+M,48,3,Éxito,'Shock séptico ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,14,550,5,0.4,36.4,6,140,80,79,90,20,0,0,130,70,90
+H,21,3,Éxito,'Traumatismo craneoencefálico','Enfermedad neurológica ',NRL,NRL,Neurológico,3,AC,14,600,?,0.4,37.6,19,156,104,65,110,21,0,0,151,104,83
+H,72,2,Fracaso,'sepsis urológica','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,19,550,8,0.4,36.6,7,184,85,95,100,28,0,0,175,70,115
+H,66,3,Éxito,'Fibrilación ventricular',Miscelánea,MISC,MISC,'Secundaria ',2,AC,14,550,5,0.4,36,3,127,66,75,80,20,0,0,128,65,77
+H,51,3,Éxito,'Deprivación alcohólica',Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,600,5,0.4,36,8,130,75,70,90,28,0,0,145,75,12
+M,37,3,Éxito,'Sepsis abdominal ','Patología abdominal ',PABD,PULM,'Primario ',1,AC,18,600,5,0.4,37,36,127,64,68,80,18,0,0,130,67,80
+M,60,2,Fracaso,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,20,450,5,0.4,37,11,137,61,112,110,36,0,0,158,69,121
+M,60,2,Fracaso,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,20,450,5,0.4,37.2,12,155,65,115,110,28,0,0,164,62,111
+H,71,2,Fracaso,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,12,500,5,0.4,36.5,5,148,62,100,100,21,0,0,177,77,100
+H,47,3,Éxito,'Shock séptico ',Miscelánea,MISC,MISC,'Secundaria ',2,PS,12,500,5,0.4,36,7,140,70,60,100,19,0,0,140,70,65
+H,64,3,Éxito,'Infarto agudo de miocardio','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,12,600,5,0.4,36.4,4,135,90,110,150,24,0,0,139,83,117
+H,64,3,Éxito,'Infarto agudo de miocardio','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,17,650,5,0.4,36.5,5,130,85,105,100,30,0,4,130,85,100
+H,59,3,Éxito,'Sepsis abdominal ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,8,500,5,0.4,36,6,127,68,92,90,25,0,4,108,60,94
+H,56,3,Éxito,Asma,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,PS,21,500,5,0.4,36,6,130,70,94,100,23,0,4,145,73,100
+H,58,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,650,5,0.4,36,7,125,70,80,180,29,0,4,120,86,88
+H,52,4,Reentubado,'Shock séptico ',Miscelánea,MISC,MISC,'Secundaria ',2,AC,24,600,5,0.4,36,42,170,80,125,85,30,?,4,175,80,126
+M,59,3,Éxito,'Enfermedad arterial periférica','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,20,450,5,0.4,36.6,4,150,80,80,?,21,?,4,140,73,81
+M,69,4,Reentubado,?,?,?,?,'Secundaria ',2,AC,12,450,2,0.4,36,3,130,?,88,115,23,?,4,130,60,101
+M,77,2,Fracaso,'Shock séptico ',Miscelánea,MISC,PULM,'Primario ',1,AC,15,535,5,0.4,36,18,95,60,76,92,40,?,4,160,70,94
+M,69,2,Fracaso,?,?,?,?,'Secundaria ',2,AC,10,350,5,0.4,37,11,140,70,85,115,28,?,4,164,76,111
+M,37,2,Fracaso,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,400,5,0.4,36,7,105,6,83,100,35,?,4,110,60,103
+H,66,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,650,5,0.4,36,6,140,65,80,130,25,250,4,110,60,80
+M,37,4,Reentubado,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,16,400,5,0.4,36,9,113,54,94,100,20,?,4,100,55,94
+H,66,2,Fracaso,?,?,?,?,'Secundaria ',2,AC,18,650,5,0.4,36,7,120,50,80,130,25,?,4,150,79,106
+H,66,3,Éxito,?,?,?,?,'Secundaria ',2,AC,15,700,5,0.4,35.5,8,105,60,73,130,30,?,4,127,55,120
+H,79,3,Éxito,'Infarto agudo de miocardio',Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,530,5,0.4,36,6,119,57,89,110,27,?,4,130,60,90
+H,64,3,Éxito,'By - Pass bifemoral ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,22,650,5,0.4,36,7,130,70,90,85,25,?,4,130,70,?
+H,83,4,Reentubado,'Ictericia obstructiva','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,12,500,5,0.4,36.5,6,126,70,60,95,23,?,4,140,65,73
+H,80,3,Éxito,'Insuficiencia cardíaca congestiva','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,15,550,5,0.4,37.5,4,135,64,85,100,25,?,4,170,85,100
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+M,80,2,Fracaso,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,15,600,5,0.4,36,7,140,57,60,100,24,?,4,160,63,70
+H,78,3,Éxito,Neumonía,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,23,500,5,0.4,36,10,135,66,74,100,24,?,4,130,65,98
+H,82,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,500,5,0.4,37,3,140,57,65,120,19,?,4,151,64,72
+H,82,3,Éxito,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,500,5,0.4,36,4,145,61,70,120,17,?,4,155,65,70
+H,73,3,Éxito,'Síndrome confusional ',Miscelánea,MISC,MISC,'Secundaria ',2,AC,15,650,5,0.4,36.8,3,140,60,70,107,30,?,4,130,60,80
+H,40,2,Fracaso,'Shock séptico ','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,24,500,5,0.4,36,10,128,74,60,90,35,250,4,140,77,94
+M,73,2,Fracaso,'Cardiopatía isquemémica',Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,600,5,0.4,36,5,145,57,75,84,40,300,4,154,50,86
+M,71,2,Fracaso,Sepsis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,20,500,5,0.4,36,14,140,70,97,97,39,400,4,130,67,118
+H,80,2,Fracaso,'Insuficiencia crónica agudizada',Miscelánea,MISC,MISC,'Secundaria ',2,AC,16,550,5,0.4,36,4,150,60,68,86,23,400,4,160,67,80
+H,80,2,Fracaso,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,17,400,5,0.4,36,5,150,65,98,86,22,400,4,160,70,100
+H,59,3,Éxito,'Shock séptico ',Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,600,5,0.4,36.5,5,130,70,86,110,25,400,4,110,60,100
+M,75,2,Fracaso,'Shock cardiogénico','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,30,500,5,0.4,36,9,110,40,86,90,42,400,4,120,50,100
+M,75,2,Fracaso,'Shock cardiogénico','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,13,550,5,0.4,36.5,10,113,38,83,90,40,90,4,115,41,90
+M,75,3,Éxito,'Shock cardiogénico','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,12,550,5,0.4,36,11,126,40,80,90,26,400,4,120,43,90
+H,75,3,Éxito,'Hematoma subdural ','Enfermedad neurológica ',NRL,NRL,Neurológico,3,PS,26,400,5,0.4,36,5,145,76,80,120,25,400,4,160,80,93
+M,87,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,30,385,5,0.4,36,7,140,68,85,110,24,390,4,140,68,86
+H,44,3,Éxito,'Síndrome de dificultad respiratoria aguda',Miscelánea,MISC,PULM,'Primario ',1,PS,17,700,5,0.4,36,10,110,50,75,90,22,400,4,100,44,67
+H,31,3,Éxito,'Neumonía neumocócica','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,600,5,0.4,36,6,140,80,100,100,24,350,4,170,90,100
+M,76,3,Éxito,'Insuficiencia cardíaca ','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,17,500,5,0.4,36,7,142,50,80,100,18,350,4,170,60,90
+M,78,2,Fracaso,'Shock séptico ',Miscelánea,MISC,ICC,'Secundaria ',2,AC,20,500,5,0.4,36,5,140,60,90,110,20,200,4,200,110,110
+H,63,3,Éxito,Hepatectomía,'Patología abdominal ',PABD,ICC,'Secundaria ',2,AC,20,600,5,0.4,36,7,130,50,72,73,25,350,4,180,65,76
+M,78,2,Fracaso,'Shock séptico ',Miscelánea,MISC,ICC,'Secundaria ',2,AC,18,500,5,0.4,36,6,138,60,95,110,12,380,4,135,60,100
+M,78,3,Éxito,'Shock ',Miscelánea,MISC,ICC,'Secundaria ',2,PS,29,500,5,0.4,36,8,118,46,100,110,30,0,4,109,41,110
+H,64,3,Éxito,'Infarto agudo de miocardio','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,PS,22,350,5,0.4,36,5,144,57,64,100,34,300,4,154,57,63
+M,75,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,26,450,5,0.4,36,6,170,77,75,100,25,0,0,175,80,76
+H,85,2,Fracaso,'Shock hemorrágico',Miscelánea,MISC,MISC,'Secundaria ',2,AC,30,380,5,0.4,36,19,113,52,100,100,40,0,0,104,50,105
+H,87,3,Éxito,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,PS,20,450,5,0.4,36.5,15,140,55,70,90,20,0,0,140,55,70
+M,78,2,Fracaso,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,600,5,0.4,37,5,140,64,80,140,25,0,0,170,85,109
+H,76,3,Éxito,'Pancreatitis ','Patología abdominal ',PABD,ICC,'Secundaria ',2,PS,20,500,5,0.4,36,5,160,70,85,100,22,0,0,202,92,110
+M,78,3,Éxito,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,600,5,0.4,36,6,150,70,80,140,26,0,0,190,85,80
+M,69,2,Fracaso,Pancreatitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,16,500,5,0.4,36,25,?,?,76,100,31,?,0,113,64,102
+H,82,2,Fracaso,'By - Pass',Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,500,5,0.4,36.5,9,160,75,99,100,24,0,0,110,70,86
+H,65,3,Éxito,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,17,?,5,0.4,36,4,160,78,75,100,32,0,0,190,83,110
+H,64,3,Éxito,'By - Pass','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,15,550,5,0.4,37,8,111,61,116,90,30,0,0,126,33,113
+H,78,3,Éxito,'Insuficiencia cardíaca ','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,17,700,5,0.4,36.5,5,127,71,68,170,14,0,0,140,75,75
+M,86,2,Fracaso,'Insuficiencia respiratoria hipercápnica','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,500,5,0.4,36,5,180,80,94,100,30,0,0,197,80,109
+H,78,2,Fracaso,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,15,?,5,0.4,36,4,?,?,80,130,25,0,0,180,90,90
+M,66,3,Éxito,'Insuficiencia respiratoria hipercápnica','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,20,500,5,0.4,37,11,145,60,70,100,20,?,0,180,67,90
+H,77,?,?,'Insuficiencia cardíacca ','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,12,?,10,0.4,36,6,130,90,84,120,30,?,0,145,80,80
+H,47,2,Fracaso,Asma,'Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,500,?,0.4,36,7,?,?,88,100,25,?,0,140,75,115
+H,51,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,12,600,5,0.4,36,4,175,100,90,150,25,?,0,170,85,107
+H,56,2,Fracaso,Peritonitis,'Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,17,500,5,0.4,38,16,100,60,100,90,40,0,0,135,70,130
+M,71,2,Fracaso,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,16,?,5,0.4,36,13,170,65,100,90,16,0,0,180,70,112
+H,60,2,Fracaso,'Insuficiencia Respiratoria crónica agudizada','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,12,600,5,0.4,36,6,160,88,85,110,87,0,0,160,88,87
+H,66,2,Fracaso,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,12,500,5,0.4,36,7,135,80,80,100,17,0,0,170,80,70
+H,71,4,Reentubado,'Enfermedad pulmonar obstructiva crónica ','Enfermedad pulmonar',PULM,ICC,'Secundaria ',2,AC,12,650,5,0.4,36,15,180,50,84,120,90,0,0,184,84,90
+M,84,2,Fracaso,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,15,600,5,0.4,36,5,120,50,75,140,15,0,0,120,50,78
+M,85,3,Éxito,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,17,600,5,0.4,36,4,170,65,60,120,20,0,0,170,58,64
+M,84,3,Éxito,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,500,5,0.4,36,11,125,41,68,90,24,0,0,117,40,50
+H,82,3,Éxito,'By - Pass','Patología abdominal ',PABD,PABD,'Secundaria ',2,AC,14,500,5,0.4,36,9,170,70,68,100,16,0,0,180,70,71
+H,54,3,Éxito,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,14,600,5,0.4,37,6,164,70,53,110,50,0,0,160,70,50
+M,81,3,Éxito,'Insuficiencia cardíaca','Insuficiencia cardíaca ',ICC,ICC,'Secundaria ',2,AC,12,600,5,0.4,37,11,100,52,80,100,18,0,4,124,64,84
+?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?
+H,80,3,Éxito,'Neumonía ','Enfermedad pulmonar',PULM,PULM,'Primario ',1,AC,18,500,5,0.4,36,4,?,?,90,90,18,?,0,175,80,90
+H,66,?,?,Hemoptisis,Miscelánea,MISC,MISC,'Secundaria ',2,AC,20,600,5,0.4,36,8,157,78,83,90,83,0,0,150,80,85
+H,66,3,Éxito,Hemoptisis,Miscelánea,MISC,MISC,'Secundaria ',2,AC,15,600,5,0.4,36,9,156,73,78,90,25,0,4,147,70,85

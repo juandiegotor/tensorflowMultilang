@@ -1,0 +1,2 @@
+model_checkpoint_path: "grafopp.chkp"
+all_model_checkpoint_paths: "grafopp.chkp"
