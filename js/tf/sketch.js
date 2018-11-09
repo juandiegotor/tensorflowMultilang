@@ -41,27 +41,50 @@ function modelo(activation,neuronas){
     });
 
     model.add(hidden1);
+
+    const hidden2=tf.layers.dense({
+        units:neuronas,
+        activation:activation
+    });
+
+    model.add(hidden2);
     //creo la capa de salida
     const output=tf.layers.dense({
         units:1,
         activation:activation
     });
     model.add(output);
+    //metricas
+    // binaryAccuracy,
+    // categoricalAccuracy,
+    // precision,
+    // categoricalCrossentropy,
+    // sparseCategoricalCrossentropy,
+    // mse,
+    // MSE,
+    // mae,
+    // MAE,
+    // mape,
+    // MAPE,
+    // cosine,
     //Compilo el modelo
+
     const config={
         optimizer: tf.train.sgd(0.1), //learning rate
         loss: tf.losses.meanSquaredError, //error
-        metrics: ['accuracy'],
+        metrics: ['categoricalAccuracy'],
     }
     model.compile(config);
 
     const configModel={
-        epochs:100,
+        epochs:50,
     }
 
     async function train(){
         const h=await model.fit(xtrain,ytrain,configModel);
         const x=model.evaluate(xtrain,ytrain);
+        const p=model.predict(xtrain);
+        tf.metrics.recall (ytrain, p)
         console.log('Neuronas: '+neuronas+'\nFuncion de Activavion: '+activation+'\nError y precision:'+x.toString());
     }
     train().then(()=>console.log('Training complete'));
