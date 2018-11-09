@@ -118,7 +118,7 @@ Se debe de crear un entorno de python 3.6 en Anaconda
 ```
 conda create -n ml-agents python=3.6
 ```
-luego activarlo e instalar los requerimientos 
+luego activarlo e instalar los requerimientos
 ```
 conda create -n ml-agents python=3.6
 pip install tensorflow==1.7.1
@@ -142,3 +142,56 @@ ahora par poder crear scripts que usen tensorflow agregar
 ``` C#
 using TensorFlow
 ```
+## javascript
+
+Para correr tensorflow se debe poner la siguiente linea de codigo en el head del html en el que se quiera usar:
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
+
+Luego de importar la libreria anterior se crea un nuevo script donde se trabajara.
+
+Lo primero que se debe hacer es crear el modelo
+
+const model=tf.sequential();
+
+Para clasificar en js se debe crear cada capa que se quiera usar y agregarlar al modelo, ademas la primera capa debe tener una variable llamada inputShape que son las entradas y la ultima capa debe tener un numero de neuronas igual al numero de salidas:
+
+const layer=tf.layers.dense({
+    units:nroNeuronas,
+    inputShape: datosEntrada, //Solo si es primera capa
+    activation:funcionActivacion
+});
+
+model.add(layer);
+
+Tras lo anterior de debe compilar el modelo y luego entrenarlo, las funciones para hacer esto necesitan una configuracion, en el caso de compilar es crear un optimizer, un loss y metrics, para entrenar el modelo ademas se le debe proveer las x de entrenamiento y las y de entrenamiento::
+
+const config={
+    optimizer: tf.train.sgd(0.1), //learning rate
+    loss: tf.losses.meanSquaredError, //error
+    metrics: ['accuracy'],
+}
+model.compile(config);
+
+Para entrenar la configuracion debe tener los epochs, es decir las veces que se pasaran los datos:
+
+const configModel={
+    epochs:100,
+}
+
+const h=await model.fit(xtrain,ytrain,configModel);
+
+por ultimo se hace una evaluacion, con las x de prueba y las y de prueba:
+
+const x=model.evaluate(xtest,ytest);
+
+Como js es un lenguaje front end, el corre los modelos de forma asincrona y nos devuelve una promesa, por lo cual hay que buscar una manera de trabajar con las promises de js, mostraremos una forma de hacerlo pero no es la unica:
+
+En nuestro caso creamos una funcion asincrona, en ella entrenamos y evaluamos el modelo, y luego la corremos aplicandole una funcion then():
+
+async function train(){
+        const h=await model.fit(xtrain,ytrain,configModel);
+        const x=model.evaluate(xtrain,ytrain);
+        console.log('Neuronas: '+neuronas+'\nFuncion de Activavion: '+activation+'\nError y precision:'+x.toString());
+}
+train().then(()=>console.log('Training complete'));
