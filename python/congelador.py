@@ -87,7 +87,7 @@ with graph.as_default():
     tf_train_labels = tf.constant(y_train)
     tf_valid_set    = tf.constant(X_test)
 
-    weights_1 = tf.Variable(tf.truncated_normal([num_features, num_hidden]), name="input_node")
+    weights_1 = tf.Variable(tf.truncated_normal([num_features, num_hidden], name="input_node"))
     weights_2 = tf.Variable(tf.truncated_normal([num_hidden, num_labels]))
 
     bias_1 = tf.Variable(tf.zeros([num_hidden]))

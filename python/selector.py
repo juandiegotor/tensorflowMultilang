@@ -9,7 +9,7 @@ class Ccomparator:
         self.ev = ev
     
     def __str__ (self):
-        return "{} {}".format(self.name, str(self.ev["accuracy"]))
+        return "{} {}".format(self.name, str(self.ev))
     
     def __eq__ (self, other):
         return self.ev["accuracy"] == other.ev["accuracy"]
@@ -24,7 +24,7 @@ pctes = pd.read_csv("datasets/exitosSinNulos.csv")
 comparators = []
 
 # separo la info para hacer test y pruebas
-X_train, X_test, y_train, y_test = train_test_split(pctes.iloc[::], pctes["class"], test_size=0.33, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(pctes.iloc[::], pctes["class"], test_size=0.2, random_state=42)
 columns = pctes.columns
 
 # preparacion de datos para el modelo
@@ -88,4 +88,5 @@ test_baseline()
 #test_baselineRegressor()
 #test_boostedTrees(100, 4)
 print_comparators_file("accuracy.txt")
+
 
